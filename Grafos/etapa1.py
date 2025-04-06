@@ -1,4 +1,53 @@
+import networkx as nx
+import matplotlib.pyplot as plt
 
+def visualize_graph(graph):
+    G = nx.MultiDiGraph()  # Permite múltiplas arestas direcionadas entre pares de nós
+
+    # Adiciona nós
+    for v in graph.vertices:
+        G.add_node(v)
+
+    # Adiciona arestas não direcionadas (edges e required_edges)
+    for u, v, _ in graph.edges:
+        G.add_edge(u, v, color='black')  # Aresta normal (bidirecional para visualização)
+        G.add_edge(v, u, color='black')
+    for u, v, *_ in graph.required_edges:
+        G.add_edge(u, v, color='blue')
+        G.add_edge(v, u, color='blue')
+
+    # Adiciona arcos direcionados (arcs e required_arcs)
+    for u, v, _ in graph.arcs:
+        G.add_edge(u, v, color='gray')
+    for u, v, *_ in graph.required_arcs:
+        G.add_edge(u, v, color='red')
+
+    # Define layout dos nós
+    pos = nx.spring_layout(G, seed=42)
+
+    # Desenha nós e rótulos
+    plt.figure(figsize=(10, 8))
+    nx.draw_networkx_nodes(G, pos, node_color='lightblue', node_size=500)
+    nx.draw_networkx_labels(G, pos, font_size=10, font_weight='bold')
+
+    # Desenha arestas com curvatura para diferenciar múltiplas
+    for u, v, key, data in G.edges(keys=True, data=True):
+        nx.draw_networkx_edges(
+            G,
+            pos,
+            edgelist=[(u, v)],
+            edge_color=data['color'],
+            connectionstyle='arc3,rad=0.2',  # Curvatura para evitar sobreposição
+            arrows=True,
+            arrowstyle='-|>',
+            min_source_margin=15,
+            min_target_margin=15
+        )
+
+    plt.title("Visualização do Grafo com MultiDiGraph")
+    plt.axis('off')
+    plt.show()
+    
 """ Esta classe representa um grafo misto """
 class Multigraph:
     def __init__(self):
@@ -209,12 +258,6 @@ def calculate_metrics(graph, dist, pred, index):
     metrics["avg_path"] = total / count if count > 0 else 0
     metrics["diameter"] = diameter
 
-    # Exemplo de reconstrução de caminho (opcional)
-    if len(vertices) >= 2:
-        u, v = vertices[0], vertices[1]
-        path = reconstruct_path(u, v, pred, index)
-        metrics["example_path"] = {"from": u, "to": v, "path": path}
-
     return metrics
 
 
@@ -245,29 +288,49 @@ def print_matrices(dist, pred, index, sample_size=5):
 
 def main():
     try:
-        graph = load_instance("BHW1.dat")
+        graph = load_instance("mggdb_0.25_6.dat")
         dist, pred, index = floyd_warshall(graph)
         metrics = calculate_metrics(graph, dist, pred, index)
+        
+        metric_labels = {
+            "num_vertices": "Número total de vértices",
+            "num_edges": "Número total de arestas",
+            "num_arcs": "Número total de arcos",
+            "num_required_nodes": "Número de nós obrigatórios",
+            "num_required_edges": "Número de arestas obrigatórias",
+            "num_required_arcs": "Número de arcos obrigatórios",
+            "betweenness": "Intermediação (Betweenness Centrality)",
+            "density": "Densidade do grafo",
+            "min_degree": "Grau mínimo",
+            "max_degree": "Grau máximo",
+            "avg_path": "Caminho médio",
+        }
 
         print("=== Métricas do Grafo ===")
         for key, value in metrics.items():
+            label = metric_labels.get(key, key)  # Usa a frase personalizada, ou a chave como fallback
+
             if key == "betweenness":
-                print(f"{key}:")
+                print(f"{label}:")
                 for node, bc in sorted(value.items()):
-                    print(f"  Nó {node}: {bc}")
+                    print(f"  Nó {node}: {bc:.4f}")
             elif key == "example_path":
-                print(f"\nExemplo de caminho mais curto (entre {value['from']} e {value['to']}):")
+                print(f"\n{label} (entre {value['from']} e {value['to']}):")
                 print(" -> ".join(map(str, value["path"])))
             else:
-                print(f"{key}: {value:.2f}" if isinstance(value, float) else f"{key}: {value}")
+                print(f"{label}: {value:.2f}" if isinstance(value, float) else f"{label}: {value}")
+
 
         # Exibe as matrizes (amostra dos primeiros 5 nós)
         print_matrices(dist, pred, index, sample_size=5)
+        
+        visualize_graph(graph)  # Visualiza o grafo após calcular as métricas
                 
     except FileNotFoundError:
         print("Erro: Arquivo BHW1.dat não encontrado.")
     except Exception as e:
         print(f"Erro inesperado: {str(e)}")
+        
 
 if __name__ == "__main__":
     main()

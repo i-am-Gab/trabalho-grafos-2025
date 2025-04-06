@@ -16,6 +16,24 @@ Este projeto implementa uma estrutura de grafo misto (contendo arestas não dire
 - Python 3.8+  
 - Nenhuma dependência externa (usa apenas bibliotecas padrão) 
 
+## 🗂️ Estrutra dos arquivos
+
+trabalho-grafos-2025/
+│
+├── app/
+│   ├── main.ipynb              # Arquivo principal (notebook Jupyter)
+│   ├── graph.py                # Definição da classe Multigraph
+│   ├── loader.py               # Função load_instance
+│   ├── algorithms.py           # Algoritmos de caminho mínimo, reconstrução, etc.
+│   ├── metrics.py              # Cálculo das métricas do grafo
+│   ├── utils.py                # Funções auxiliares (como print_matrices)
+│   ├── labels.py               # Labels das métricas para visualização
+│   └── storage/
+│       └── arquivos_exemplo/   # Arquivos fornecidos como acervo para o trabalho
+│
+└── README.md                   # Instruções gerais do projeto
+
+
 ## 🔧 Como Usar
 
 #### 1. Formato do Arquivo de Entrada

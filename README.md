@@ -15,6 +15,9 @@ Este projeto implementa uma estrutura de grafo misto (contendo arestas não dire
 
 ## 🗂️ Estrutra dos arquivos
 
+## 📁 Estrutura do Projeto
+
+```bash
 📦app
  ┣ 📂src
  ┃ ┣ 📂algorithms
@@ -81,15 +84,10 @@ Este projeto implementa uma estrutura de grafo misto (contendo arestas não dire
  ┃ ┣ 📜mgval_0.50_9B.dat
  ┃ ┣ 📜mgval_0.50_9C.dat
  ┃ ┗ 📜mgval_0.50_9D.dat
- ┣ 📂__pycache__
- ┃ ┣ 📜algorithms.cpython-312.pyc
- ┃ ┣ 📜graph.cpython-312.pyc
- ┃ ┣ 📜labels.cpython-312.pyc
- ┃ ┣ 📜loader.cpython-312.pyc
- ┃ ┣ 📜metrics.cpython-312.pyc
- ┃ ┗ 📜utils.cpython-312.pyc
  ┗ 📜documentacao_projeto.md
 📜README.md
+
+```
 
 ## 🔧 Como Usar
 

@@ -1,6 +1,6 @@
 # 🚚 GCC218 - Trabalho Prático: Análise de Grafos em Problemas Logísticos
 
-> Projeto desenvolvido para o Trabalho Prático Final das disciplinas **GCC218 - Algoritmos em Grafos** e **GCC262 - Grafos e Suas Aplicações** da Universidade Federal de Lavras.
+> Projeto desenvolvido para o Trabalho Prático Final das disciplinas **GCC218 - Grafos e Suas Aplicações** da Universidade Federal de Lavras.
 
 ## 👨‍🏫 Orientador
 Prof. Mayron César O. Moreira

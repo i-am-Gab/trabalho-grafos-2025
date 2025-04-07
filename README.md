@@ -52,6 +52,8 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 - Python 3.12+  
 - Nenhuma dependência externa (usa apenas bibliotecas padrão) 
 
+---
+
 ## 📁 Estrutura do Projeto
 
 ```bash
@@ -130,7 +132,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ## 🔧 Como Usar
 
-#### 1. Formato do Arquivo de Entrada
+### 1. Formato do Arquivo de Entrada
 O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CARP, contendo:
 
 - Nós obrigatórios (ReN.)
@@ -149,7 +151,7 @@ O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CAR
 
 - Arestas/arcos não obrigatórios (EDGE/ARC sem demanda)
 
-#### 2. Execução
+### 2. Execução
 
 Insira o nome do arquivo .dat que será lido pelo programa.
  - O arquivo deve estar dentro de 📂storage;
@@ -158,18 +160,18 @@ Insira o nome do arquivo .dat que será lido pelo programa.
 Saída esperada:
 
 === Métricas do Grafo ===
-Número total de vértices
-Número total de arestas
-Número total de arcos
-Número de nós obrigatórios
-Número de arestas obrigatórias
-Número de arcos obrigatórios
-Densidade do grafo
-Grau mínimo
-Grau máximo
-Intermediação (Betweenness Centrality)
-Caminho médio
-Diâmetro
+- Número total de vértices
+- Número total de arestas
+- Número total de arcos
+- Número de nós obrigatórios
+- Número de arestas obrigatórias
+- Número de arcos obrigatórios
+- Densidade do grafo
+- Grau mínimo
+- Grau máximo
+- Intermediação (Betweenness Centrality)
+- Caminho médio
+- Diâmetro
 
 === Matriz de Distâncias (completa) ===
 

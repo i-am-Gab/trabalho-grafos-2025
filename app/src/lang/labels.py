@@ -1,4 +1,5 @@
 metric_labels = {
+    "tipo": "Tipo de grafo",
     "num_vertices": "Número total de vértices",
     "num_arestas": "Número total de arestas",
     "num_arcos": "Número total de arcos",
@@ -11,4 +12,7 @@ metric_labels = {
     "grau_maximo": "Grau máximo",
     "caminho_medio": "Caminho médio",
     "diametro": "Diâmetro",
+    "misto": "Misto",
+    "direcionado": "Direcionado",
+    "nao_direcionado": "Não direcionado",
 }

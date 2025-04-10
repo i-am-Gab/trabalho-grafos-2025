@@ -74,9 +74,9 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
  ┃ ┃ ┗ 📜loader.py
  ┃ ┣ 📂metrics
  ┃ ┃ ┗ 📜metrics.py
- ┃ ┣ 📂utils
- ┃ ┃ ┗ 📜utils.py
- ┃ ┗ 📜main.ipynb
+ ┃ ┗ 📂utils
+ ┃   ┗ 📜utils.py
+ ┃ 
  ┣ 📂storage
  ┃ ┣ 📜BHW1.dat
  ┃ ┣ 📜BHW10.dat
@@ -129,6 +129,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
  ┃ ┣ 📜mgval_0.50_9C.dat
  ┃ ┗ 📜mgval_0.50_9D.dat
  ┗ 📜documentacao_projeto.md
+📜main.ipynb
 📜README.md
 
 ```

@@ -1,12 +1,16 @@
 def calcular_metricas(grafo, distancias, pred, indice):
     metricas = {}
+    
+    # Identifica o tipo de grafo
+    tipo = identificar_tipo_grafo(grafo)
+    metricas["tipo"] = tipo
 
     # Métricas básicas
     metricas.update(calcular_metricas_basicas(grafo))
     
     # Densidade do grafo
     n = len(grafo.vertices)
-    metricas["densidade"] = calcular_densidade(n, metricas["num_arestas"], metricas["num_arcos"])
+    metricas["densidade"] = calcular_densidade(n, metricas["num_arestas"], metricas["num_arcos"], tipo)
     
     # Grau dos vértices
     grau, grau_minimo, grau_maximo = calcular_grau(grafo)
@@ -24,6 +28,19 @@ def calcular_metricas(grafo, distancias, pred, indice):
 
     return metricas
 
+def identificar_tipo_grafo(grafo):
+    tem_arestas = len(grafo.arestas) > 0 or len(grafo.arestas_obrigatorias) > 0
+    tem_arcos = len(grafo.arcos) > 0 or len(grafo.arcos_obrigatorios) > 0
+
+    if tem_arestas and tem_arcos:
+        return 'misto'
+    elif tem_arcos:
+        return 'direcionado'
+    elif tem_arestas:
+        return 'nao_direcionado'
+    else:
+        return 'vazio'
+
 def calcular_metricas_basicas(grafo):
     metricas = {}
     metricas["num_vertices"] = len(grafo.vertices)
@@ -34,10 +51,21 @@ def calcular_metricas_basicas(grafo):
     metricas["num_arcos_obrigatorios"] = len(grafo.arcos_obrigatorios)
     return metricas
 
-def calcular_densidade(n, num_arestas, num_arcos):
-    max_conexoes = n * (n - 1)
-    total_conexoes = num_arestas + num_arcos
+def calcular_densidade(n, num_arestas, num_arcos, tipo):
+    if tipo == 'nao_direcionado':
+        max_conexoes = n * (n - 1) / 2
+        total_conexoes = num_arestas
+    elif tipo == 'direcionado':
+        max_conexoes = n * (n - 1)
+        total_conexoes = num_arcos
+    elif tipo == 'misto':
+        max_conexoes = n * (n - 1)
+        total_conexoes = num_arestas + num_arcos
+    else:
+        return 0 
+
     return total_conexoes / max_conexoes if max_conexoes > 0 else 0
+
 
 def calcular_grau(grafo):
     # Inicializa o grau 0 para todos os vértices

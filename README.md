@@ -136,9 +136,47 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
+## 📋 Requisitos
+
+- Python 3.12+
+- [Jupyter Notebook](https://jupyter.org/)
+- Bibliotecas: `pandas`, `jinja2`
+
+## ⚙️ Como Rodar o Projeto
+
+### 1. Clone o Repositório
+
+```bash
+git clone https://github.com/i-am-Gab/trabalho-grafos-2025.git
+cd trabalho-grafos-2025
+```
+
+### 2. Instale o Python (se ainda não tiver)
+Instale o Python 3.12+ a partir do site oficial:
+📎 https://www.python.org/downloads/
+
+### 3. Instale as dependencias
+```bash
+pip install pandas jinja2 notebook
+```
+
 ## 🔧 Como Usar
 
-### 1. Formato do Arquivo de Entrada
+### 📊 Executando o Notebook
+1. Inicie o Jupyter Notebook
+```bash
+jupyter notebook
+```
+
+### 2. Abra o arquivo main.ipynb pela interface do navegador.
+Escolha o arquivo .dat dentro da pasta /storage
+
+Siga as instruções no notebook para rodar cada célula
+
+As métricas e visualizações serão exibidas diretamente no notebook
+
+
+### 2.1. Formato do Arquivo de Entrada
 O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CARP, contendo:
 
 - Nós obrigatórios (ReN.)
@@ -157,7 +195,7 @@ O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CAR
 
 - Arestas/arcos não obrigatórios (EDGE/ARC sem demanda)
 
-### 2. Execução
+### 2.2. Execução
 
 Insira o nome do arquivo .dat que será lido pelo programa.
  - O arquivo deve estar dentro de 📂storage;

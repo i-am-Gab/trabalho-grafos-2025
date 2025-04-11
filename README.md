@@ -3,7 +3,7 @@
 > Projeto desenvolvido para o Trabalho Prático Final das disciplinas **GCC218 - Grafos e Suas Aplicações** da Universidade Federal de Lavras.
 
 <div align="center">
-  <img src="https://img.shields.io/badge/Python-3.6%2B-blue" alt="Python 3.6+">
+  <img src="https://img.shields.io/badge/Python-3.6%2B-blue" alt="Python 3.12+">
   <img src="https://img.shields.io/badge/Licença-Educacional-green" alt="Licença Educacional">
 </div>
 

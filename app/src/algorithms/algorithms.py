@@ -44,16 +44,3 @@ def floyd_warshall(grafo):
 
     return distancias, predecessores, indice
 
-
-def reconstruir_caminho(u, v, predecessores, indice):
-    caminho = []
-    i, j = indice[u], indice[v]
-    if predecessores[i][j] is None:
-        return []
-
-    while j != i:
-        caminho.append(j)
-        j = predecessores[i][j]
-    caminho.append(i)
-    caminho.reverse()
-    return caminho

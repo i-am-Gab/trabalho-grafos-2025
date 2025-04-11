@@ -162,8 +162,8 @@ pip install pandas jinja2 notebook
 
 ## 🔧 Como Usar
 
-### 📊 Executando o Notebook
-1. Inicie o Jupyter Notebook
+### 1. Executando o Notebook
+Inicie o Jupyter Notebook
 ```bash
 jupyter notebook
 ```
@@ -176,7 +176,7 @@ Siga as instruções no notebook para rodar cada célula
 As métricas e visualizações serão exibidas diretamente no notebook
 
 
-### 2.1. Formato do Arquivo de Entrada
+#### 2.1. Formato do Arquivo de Entrada
 O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CARP, contendo:
 
 - Nós obrigatórios (ReN.)
@@ -195,7 +195,7 @@ O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CAR
 
 - Arestas/arcos não obrigatórios (EDGE/ARC sem demanda)
 
-### 2.2. Execução
+#### 2.2. Execução
 
 Insira o nome do arquivo .dat que será lido pelo programa.
  - O arquivo deve estar dentro de 📂storage;

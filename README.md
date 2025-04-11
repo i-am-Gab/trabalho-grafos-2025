@@ -154,6 +154,8 @@ Instale o Python 3.12+ a partir do site oficial:
 pip install pandas jinja2 notebook
 ```
 
+---
+
 ## 🔧 Como Usar
 
 ### 1. Executando o Notebook

@@ -128,7 +128,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
  ┃ ┣ 📜mgval_0.50_9B.dat
  ┃ ┣ 📜mgval_0.50_9C.dat
  ┃ ┗ 📜mgval_0.50_9D.dat
- ┗ 📜documentacao_projeto.md
+ ┗ 
 📜main.ipynb
 📜README.md
 

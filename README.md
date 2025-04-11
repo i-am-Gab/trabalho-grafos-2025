@@ -54,9 +54,9 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 ---
 
 ## 📋 Requisitos  
-- Python 3.12+  
-- Nenhuma dependência externa (usa apenas bibliotecas padrão) 
-
+- Python 3.12+
+- [Jupyter Notebook](https://jupyter.org/)
+- Bibliotecas: `pandas`, `jinja2`
 ---
 
 ## 📁 Estrutura do Projeto
@@ -135,12 +135,6 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 ```
 
 ---
-
-## 📋 Requisitos
-
-- Python 3.12+
-- [Jupyter Notebook](https://jupyter.org/)
-- Bibliotecas: `pandas`, `jinja2`
 
 ## ⚙️ Como Rodar o Projeto
 

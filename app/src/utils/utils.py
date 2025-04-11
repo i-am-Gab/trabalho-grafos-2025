@@ -2,7 +2,6 @@ import pandas as pd
 import jinja2
 import math
 from app.src.lang.labels import metric_labels
-import matplotlib.pyplot as plt
 
 def imprimir_matriz_dist(distancias, indice):
     vertices = sorted(indice.keys())

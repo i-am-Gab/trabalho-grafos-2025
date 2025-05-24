@@ -107,25 +107,53 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 ## 📁 Estrutura do Projeto
 
 ```bash
-📂app
- ┣ 📂src
- ┃ ┣ 📂algorithms
- ┃ ┃ ┗ 📜algorithms.py
- ┃ ┣ 📂graph
- ┃ ┃ ┗ 📜graph.py
- ┃ ┣ 📂lang
- ┃ ┃ ┗ 📜labels.py
- ┃ ┣ 📂loader
- ┃ ┃ ┗ 📜loader.py
- ┃ ┣ 📂metrics
- ┃ ┃ ┗ 📜metrics.py
- ┃ ┗ 📂utils
- ┃   ┗ 📜utils.py
- ┃ 
- ┣ 📂storage
- ┗ ┗ 📜Arquivos disponibilizados para teste.
-  
-📜main.ipynb
+📂etapa_01
+┣  📂app
+┃  ┣ 📂src
+┃  ┃ ┣ 📂algorithms
+┃  ┃ ┃ ┗ 📜algorithms.py
+┃  ┃ ┣ 📂graph
+┃  ┃ ┃ ┗ 📜graph.py
+┃  ┃ ┣ 📂lang
+┃  ┃ ┃ ┗ 📜labels.py
+┃  ┃ ┣ 📂loader
+┃  ┃ ┃ ┗ 📜loader.py
+┃  ┃ ┣ 📂metrics
+┃  ┃ ┃ ┗ 📜metrics.py
+┃  ┃ ┗ 📂utils
+┃  ┃   ┗ 📜utils.py
+┃  ┗ 📂storage
+┃    ┗ 📜Arquivos disponibilizados para teste.
+┗  📜main.ipynb  
+
+📂etapa_02
+┣  📂app
+┃  ┣ 📂src
+┃  ┃ ┣ 📂algorithms
+┃  ┃ ┃ ┗ 📜algorithms.py
+┃  ┃ ┣ 📂graph
+┃  ┃ ┃ ┗ 📜graph.py
+┃  ┃ ┣ 📂lang
+┃  ┃ ┃ ┗ 📜labels.py
+┃  ┃ ┣ 📂loader
+┃  ┃ ┃ ┗ 📜loader.py
+┃  ┃ ┣ 📂metrics
+┃  ┃ ┃ ┗ 📜metrics.py
+┃  ┃ ┗ 📂utils
+┃  ┃   ┗ 📜utils.py
+┃  ┗ 📂storage
+┃    ┣ 📂data
+┃    ┃   ┣ 📂arquivos
+┃    ┃   ┃  ┗📜Arquivos disponibilizados para teste.
+┃    ┃   ┗ 📂exemplo_solucoes
+┃    ┃      ┗📜Arquivos de solucões exemplo para comparação.
+┃    ┣ 📂padroes
+┃    ┃   ┗📜Arquivos disponibilizados para padronização do arquivo solução gerado pelo programa.
+┃    ┗ 📂solucoes
+┃       ┗ 📜Onde ficarão os arquivos das soluções geradas pelo programa.
+┗  📜main.ipynb 
+
+
 📜README.md
 
 ```

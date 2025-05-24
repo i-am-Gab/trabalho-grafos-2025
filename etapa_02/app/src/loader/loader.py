@@ -7,7 +7,13 @@ def carregar_instancia(caminho_arquivo):
 
     secao = None
     for linha in linhas:
-        if linha.startswith(("Name", "Optimal", "#", "the data is")):
+        if linha.startswith("Depot Node:"):
+            grafo.deposito = int(linha.split(":")[1].strip())
+            continue
+        elif linha.startswith("Capacity:"):
+            grafo.capacidade = int(linha.split(":")[1].strip())
+            continue
+        elif linha.startswith(("Name", "Optimal", "#", "the data is")):
             continue
 
         if "ReN." in linha:
@@ -63,7 +69,7 @@ def carregar_instancia(caminho_arquivo):
                     grafo.adicionar_arco(origem, destino, custo_transporte)
 
             except (ValueError, IndexError) as e:
-                print(f"Linha ignorada: {linha} (Erro: {str(e)})")
+                print()
                 continue
 
     return grafo

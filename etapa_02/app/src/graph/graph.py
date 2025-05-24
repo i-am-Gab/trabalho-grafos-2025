@@ -1,7 +1,7 @@
 class Multigraph:
     def __init__(self):
-        self.deposito = None
-        self.capacidade = None
+        self.deposito = 0
+        self.capacidade = 0
         self.vertices = set()
         self.arestas = []
         self.arcos = []

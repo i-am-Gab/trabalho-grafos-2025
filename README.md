@@ -59,7 +59,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto 1
 
 ```bash
 📂app
@@ -104,7 +104,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto 2
 
 ```bash
 📂etapa_01

@@ -28,6 +28,12 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
+## 📋 Requisitos  
+- Python 3.12+  
+- Nenhuma dependência externa (usa apenas bibliotecas padrão) 
+
+---
+
 ## 🔨 Etapas do Projeto
 
 ### ✅ Etapa 1 — Pré-processamento dos Dados
@@ -53,16 +59,10 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📋 Requisitos  
-- Python 3.12+  
-- Nenhuma dependência externa (usa apenas bibliotecas padrão) 
-
----
-
 ## 📁 Estrutura do Projeto
 
 ```bash
-📦app
+📂app
  ┣ 📂src
  ┃ ┣ 📂algorithms
  ┃ ┃ ┗ 📜algorithms.py
@@ -78,57 +78,53 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
  ┃   ┗ 📜utils.py
  ┃ 
  ┣ 📂storage
- ┃ ┣ 📜BHW1.dat
- ┃ ┣ 📜BHW10.dat
- ┃ ┣ 📜BHW2.dat
- ┃ ┣ 📜BHW3.dat
- ┃ ┣ 📜BHW4.dat
- ┃ ┣ 📜BHW5.dat
- ┃ ┣ 📜BHW6.dat
- ┃ ┣ 📜BHW7.dat
- ┃ ┣ 📜BHW8.dat
- ┃ ┣ 📜BHW9.dat
- ┃ ┣ 📜CBMix11.dat
- ┃ ┣ 📜CBMix12.dat
- ┃ ┣ 📜CBMix13.dat
- ┃ ┣ 📜CBMix14.dat
- ┃ ┣ 📜CBMix15.dat
- ┃ ┣ 📜CBMix16.dat
- ┃ ┣ 📜CBMix17.dat
- ┃ ┣ 📜CBMix18.dat
- ┃ ┣ 📜CBMix19.dat
- ┃ ┣ 📜CBMix20.dat
- ┃ ┣ 📜DI-NEARP-n240-Q16k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q4k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q8k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q16k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q4k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q8k.dat
- ┃ ┣ 📜DI-NEARP-n442-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n442-Q4k.dat
- ┃ ┣ 📜mggdb_0.25_1.dat
- ┃ ┣ 📜mggdb_0.25_10.dat
- ┃ ┣ 📜mggdb_0.25_2.dat
- ┃ ┣ 📜mggdb_0.25_3.dat
- ┃ ┣ 📜mggdb_0.25_4.dat
- ┃ ┣ 📜mggdb_0.25_5.dat
- ┃ ┣ 📜mggdb_0.25_6.dat
- ┃ ┣ 📜mggdb_0.25_7.dat
- ┃ ┣ 📜mggdb_0.25_8.dat
- ┃ ┣ 📜mggdb_0.25_9.dat
- ┃ ┣ 📜mgval_0.50_10A.dat
- ┃ ┣ 📜mgval_0.50_10B.dat
- ┃ ┣ 📜mgval_0.50_10C.dat
- ┃ ┣ 📜mgval_0.50_10D.dat
- ┃ ┣ 📜mgval_0.50_8B.dat
- ┃ ┣ 📜mgval_0.50_8C.dat
- ┃ ┣ 📜mgval_0.50_9A.dat
- ┃ ┣ 📜mgval_0.50_9B.dat
- ┃ ┣ 📜mgval_0.50_9C.dat
- ┃ ┗ 📜mgval_0.50_9D.dat
- ┗ 
+ ┗ ┗ 📜Arquivos disponibilizados para teste.
+  
+📜main.ipynb
+📜README.md
+
+```
+
+---
+
+### ✅ Etapa 2 — Pré-processamento dos Dados
+
+- Desenvolvimento de um algoritmo construtivo para o problema.
+- Construção de uma solução que atenda a todas as restrições do problema.
+- Garantia das seguintes condições:
+  - Não ultrapassar a capacidade dos veículos em cada rota.
+  - Cada serviço executado por exatamente uma rota.
+  - Caso uma rota passe mais de uma vez por um vértice, aresta ou arco obrigatório, o valor de demanda e o custo de serviço devem ser contabilizados apenas uma vez.
+- Testes com todas as instâncias disponibilizadas.
+- Organização e entrega das soluções conforme as seguintes orientações:
+  - As soluções são armazenadas em uma pasta com o nome do grupo, com extensão .zip.
+    - Exemplo: G1.zip
+  - Cada solução é nomeada conforme o padrão:
+    - Exemplo: sol-BHW1.dat
+
+---
+
+## 📁 Estrutura do Projeto
+
+```bash
+📂app
+ ┣ 📂src
+ ┃ ┣ 📂algorithms
+ ┃ ┃ ┗ 📜algorithms.py
+ ┃ ┣ 📂graph
+ ┃ ┃ ┗ 📜graph.py
+ ┃ ┣ 📂lang
+ ┃ ┃ ┗ 📜labels.py
+ ┃ ┣ 📂loader
+ ┃ ┃ ┗ 📜loader.py
+ ┃ ┣ 📂metrics
+ ┃ ┃ ┗ 📜metrics.py
+ ┃ ┗ 📂utils
+ ┃   ┗ 📜utils.py
+ ┃ 
+ ┣ 📂storage
+ ┗ ┗ 📜Arquivos disponibilizados para teste.
+  
 📜main.ipynb
 📜README.md
 

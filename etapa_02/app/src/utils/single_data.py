@@ -3,11 +3,11 @@ import os
 
 from app.src.loader.loader import carregar_instancia
 from app.src.algorithms.floyd_warshall import floyd_warshall
-from app.src.algorithms.path_scanning import path_scanning
+from app.src.algorithms.clarke_wright import clarke_wright
 from app.src.utils.service_map import mapear_servicos_para_id_servico
 from app.src.utils.exporter import salvar_solucao
 
-def executar_algoritmo_arquivo_unico(resultado, caminho_saida, CLOCKS_PER_SEC):
+def executar_algoritmo_arquivo_unico(resultado, caminho_saida):
     inicio_execucao = time.perf_counter()
     
     nome_instancia = os.path.splitext(os.path.basename(resultado))[0]
@@ -15,7 +15,7 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida, CLOCKS_PER_SEC):
     distancias, predecessores, index = floyd_warshall(grafo)
     
     inicio_solucao = time.perf_counter()
-    rotas = path_scanning(grafo, distancias, index)
+    rotas = clarke_wright(grafo, distancias, index)
     fim_solucao = time.perf_counter()
     
     mapa_servicos = mapear_servicos_para_id_servico(grafo)
@@ -23,8 +23,8 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida, CLOCKS_PER_SEC):
     
     fim_execucao = time.perf_counter()
     
-    tempo_solucao = int((fim_solucao - inicio_solucao) * CLOCKS_PER_SEC)
-    tempo_execucao = int((fim_execucao - inicio_execucao) * CLOCKS_PER_SEC)
+    tempo_solucao = int((fim_solucao - inicio_solucao) * 1_000_000)
+    tempo_execucao = int((fim_execucao - inicio_execucao) * 1_000_000)
     
     salvar_solucao(
         path_saida=caminho_saida,
@@ -36,4 +36,5 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida, CLOCKS_PER_SEC):
         tempo_solucao=tempo_solucao
     )
     
-    return (tempo_execucao, tempo_solucao)
+    print("O arquivo solução foi salvo com sucesso! O mesmo pode ser encontrado em:")
+    print(f"etapa_02/{caminho_saida}/{nome_instancia}.dat")

@@ -58,16 +58,16 @@ def escolher_arquivos(diretorio):
         opcao = input("Digite 1, 2 ou 0: ").strip()
 
         if opcao == '1':
-            nome_arquivo = input("Digite o nome do arquivo (sem extensão): ").strip() + '.dat'
+            nome_arquivo = input("Digite o nome do arquivo: ").strip() + '.dat'
             if nome_arquivo in arquivos:
                 caminho = os.path.join(diretorio, nome_arquivo)
-                return caminho  # <------ Aqui devolve o caminho!
+                return caminho 
             else:
                 print("Arquivo não encontrado no diretório.")
 
         elif opcao == '2':
             caminhos = [os.path.join(diretorio, nome) for nome in arquivos]
-            return caminhos  # <--- Aqui devolve a lista de caminhos!
+            return caminhos
 
         elif opcao == '0':
             print("Saindo...")

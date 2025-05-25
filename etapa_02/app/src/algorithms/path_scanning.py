@@ -1,4 +1,4 @@
-from src.utils.services import listar_servicos
+from app.src.utils.services import listar_servicos
 
 def path_scanning(grafo, distancias, indice):
     servicos = listar_servicos(grafo)

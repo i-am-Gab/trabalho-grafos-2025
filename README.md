@@ -97,8 +97,6 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
   - Caso uma rota passe mais de uma vez por um vértice, aresta ou arco obrigatório, o valor de demanda e o custo de serviço devem ser contabilizados apenas uma vez.
 - Testes com todas as instâncias disponibilizadas.
 - Organização e entrega das soluções conforme as seguintes orientações:
-  - As soluções são armazenadas em uma pasta com o nome do grupo, com extensão .zip.
-    - Exemplo: G1.zip
   - Cada solução é nomeada conforme o padrão:
     - Exemplo: sol-BHW1.dat
 

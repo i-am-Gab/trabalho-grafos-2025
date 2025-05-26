@@ -78,6 +78,6 @@ Caso opte pela opção 1:
   - Será retornada uma mensagem indicando sucesso ou falha na execução.
 
 Caso opte pela opção 2:
-    Basta esperar que o programa automaticamente irá reconhecer todos os arquivos na pasta e irá executar os algoritmos para cada um.
+- Basta esperar que o programa automaticamente irá reconhecer todos os arquivos na pasta e irá executar os algoritmos para cada um.
     - O arquivo solução será gerado dentro de 📂storage/solucoes. E o nome seguirá o padrão "sol-'nome do arquivo escolhido'.dat".
     - Será retornada uma mensagem indicando sucesso ou falha na execução.

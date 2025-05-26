@@ -164,6 +164,13 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
+Para mais informações, leia o README de cada etapa, disponíveis em:
+
+- [@Etapa 01](https://github.com/i-am-Gab/trabalho-grafos-2025/blob/6a216886ac6fea78558d3f33417555a8cec4b85b/etapa_01/README.md)
+- [@Etapa 02]([https://https://github.com/i-am-Gab](https://github.com/i-am-Gab/trabalho-grafos-2025/blob/6a216886ac6fea78558d3f33417555a8cec4b85b/etapa_02/README.md))
+
+---
+
 ## Autores
 
 - [@GabrielAguiar](https://https://github.com/i-am-Gab)

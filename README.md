@@ -87,7 +87,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-### ✅ Etapa 2 — Pré-processamento dos Dados
+### ✅ Etapa 2 — Solução Inicial
 
 - Desenvolvimento de um algoritmo construtivo para o problema.
 - Construção de uma solução que atenda a todas as restrições do problema.

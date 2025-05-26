@@ -23,6 +23,7 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida):
     
     fim_execucao = time.perf_counter()
     
+    #1_000_000 = A quantidade de clock/segundos no c++ por padrão
     tempo_solucao = int((fim_solucao - inicio_solucao) * 1_000_000)
     tempo_execucao = int((fim_execucao - inicio_execucao) * 1_000_000)
     

@@ -7,7 +7,7 @@ def clarke_wright(grafo, distancias, indice):
     rotas = []
     servico_para_rota = {}
 
-    # Etapa 1: Criar rota inicial para cada serviço
+    # Criar rota inicial para cada serviço
     for idx, s in enumerate(servicos):
         custo_inicio = distancias[indice[deposito]][indice[s['origem']]]
         custo_fim = distancias[indice[s['destino']]][indice[deposito]]
@@ -24,7 +24,7 @@ def clarke_wright(grafo, distancias, indice):
         rotas.append(rota)
         servico_para_rota[idx] = rota
 
-    # Etapa 2: Calcular savings para todos os pares de serviços
+    # Calcular savings para todos os pares de serviços
     savings = []
     for i in range(len(servicos)):
         for j in range(len(servicos)):
@@ -42,7 +42,7 @@ def clarke_wright(grafo, distancias, indice):
     # Ordenar savings do maior para o menor
     savings.sort(reverse=True)
 
-    # Etapa 3: Tentar unir rotas com base nos savings
+    # Tentar unir rotas com base nos savings
     for saving, i, j in savings:
         rota_i = servico_para_rota.get(i)
         rota_j = servico_para_rota.get(j)
@@ -80,7 +80,7 @@ def clarke_wright(grafo, distancias, indice):
                         if servico in nova_servicos:
                             servico_para_rota[idx_s] = nova_rota
     
-    # Etapa 4: Converter rotas para formato final de saída
+    # Converter rotas para formato final de saída
     resultado = []
     for rota in rotas:        
         passos = [(s['tipo'], s['origem'], s['destino']) for s in rota['servicos']]

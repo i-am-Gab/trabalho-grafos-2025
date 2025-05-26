@@ -71,13 +71,13 @@ Informe a maneira com que você deseja executar o programa:
     2 - Executar para todos os arquivos na pasta 📂storage/data/arquivos.
 
 Caso opte pela opção 1:
-    Insira o nome do arquivo .dat que será lido pelo programa.
-    - O arquivo deve estar dentro de 📂storage/data/arquivos;
-    - O arquivo deve estar formatado de acordo com os demais arquivos presentes na pasta. 
-    - O arquivo solução será gerado dentro de 📂storage/solucoes. E o nome seguirá o padrão "sol-'nome do arquivo escolhido'.dat".
-    - Será retornada uma mensagem indicando sucesso ou falha na execução.
+- Insira o nome do arquivo .dat que será lido pelo programa.
+  - O arquivo deve estar dentro de 📂storage/data/arquivos;
+  - O arquivo deve estar formatado de acordo com os demais arquivos presentes na pasta.
+  - O arquivo solução será gerado dentro de 📂storage/solucoes. E o nome seguirá o padrão "sol-'nome do arquivo escolhido'.dat".
+  - Será retornada uma mensagem indicando sucesso ou falha na execução.
 
 Caso opte pela opção 2:
     Basta esperar que o programa automaticamente irá reconhecer todos os arquivos na pasta e irá executar os algoritmos para cada um.
-        - O arquivo solução será gerado dentro de 📂storage/solucoes. E o nome seguirá o padrão "sol-'nome do arquivo escolhido'.dat".
-        - Será retornada uma mensagem indicando sucesso ou falha na execução.
+    - O arquivo solução será gerado dentro de 📂storage/solucoes. E o nome seguirá o padrão "sol-'nome do arquivo escolhido'.dat".
+    - Será retornada uma mensagem indicando sucesso ou falha na execução.

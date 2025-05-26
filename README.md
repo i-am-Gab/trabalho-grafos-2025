@@ -59,34 +59,6 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📁 Estrutura do Projeto 1
-
-```bash
-📂app
- ┣ 📂src
- ┃ ┣ 📂algorithms
- ┃ ┃ ┗ 📜algorithms.py
- ┃ ┣ 📂graph
- ┃ ┃ ┗ 📜graph.py
- ┃ ┣ 📂lang
- ┃ ┃ ┗ 📜labels.py
- ┃ ┣ 📂loader
- ┃ ┃ ┗ 📜loader.py
- ┃ ┣ 📂metrics
- ┃ ┃ ┗ 📜metrics.py
- ┃ ┗ 📂utils
- ┃   ┗ 📜utils.py
- ┃ 
- ┣ 📂storage
- ┗ ┗ 📜Arquivos disponibilizados para teste.
-  
-📜main.ipynb
-📜README.md
-
-```
-
----
-
 ### ✅ Etapa 2 — Solução Inicial
 
 - Desenvolvimento de um algoritmo construtivo para o problema.
@@ -102,7 +74,7 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📁 Estrutura do Projeto 2
+## 📁 Estrutura do Projeto 
 
 ```bash
 📂etapa_01

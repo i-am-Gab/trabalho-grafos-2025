@@ -28,6 +28,12 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
+## 📋 Requisitos  
+- Python 3.12+  
+- Nenhuma dependência externa (usa apenas bibliotecas padrão) 
+
+---
+
 ## 🔨 Etapas do Projeto
 
 ### ✅ Etapa 1 — Pré-processamento dos Dados
@@ -53,169 +59,87 @@ Um subconjunto de nós `VR`, arestas `ER` e arcos `AR` requerem atendimento. A d
 
 ---
 
-## 📋 Requisitos  
-- Python 3.12+
-- [Jupyter Notebook](https://jupyter.org/)
-- Bibliotecas: `pandas`, `jinja2`
+### ✅ Etapa 2 — Solução Inicial
+
+- Desenvolvimento de um algoritmo construtivo para o problema.
+- Construção de uma solução que atenda a todas as restrições do problema.
+- Garantia das seguintes condições:
+  - Não ultrapassar a capacidade dos veículos em cada rota.
+  - Cada serviço executado por exatamente uma rota.
+  - Caso uma rota passe mais de uma vez por um vértice, aresta ou arco obrigatório, o valor de demanda e o custo de serviço devem ser contabilizados apenas uma vez.
+- Testes com todas as instâncias disponibilizadas.
+- Organização e entrega das soluções conforme as seguintes orientações:
+  - Cada solução é nomeada conforme o padrão:
+    - Exemplo: sol-BHW1.dat
+
 ---
 
-## 📁 Estrutura do Projeto
+## 📁 Estrutura do Projeto 
 
 ```bash
-📦app
- ┣ 📂src
- ┃ ┣ 📂algorithms
- ┃ ┃ ┗ 📜algorithms.py
- ┃ ┣ 📂graph
- ┃ ┃ ┗ 📜graph.py
- ┃ ┣ 📂lang
- ┃ ┃ ┗ 📜labels.py
- ┃ ┣ 📂loader
- ┃ ┃ ┗ 📜loader.py
- ┃ ┣ 📂metrics
- ┃ ┃ ┗ 📜metrics.py
- ┃ ┗ 📂utils
- ┃   ┗ 📜utils.py
- ┃ 
- ┣ 📂storage
- ┃ ┣ 📜BHW1.dat
- ┃ ┣ 📜BHW10.dat
- ┃ ┣ 📜BHW2.dat
- ┃ ┣ 📜BHW3.dat
- ┃ ┣ 📜BHW4.dat
- ┃ ┣ 📜BHW5.dat
- ┃ ┣ 📜BHW6.dat
- ┃ ┣ 📜BHW7.dat
- ┃ ┣ 📜BHW8.dat
- ┃ ┣ 📜BHW9.dat
- ┃ ┣ 📜CBMix11.dat
- ┃ ┣ 📜CBMix12.dat
- ┃ ┣ 📜CBMix13.dat
- ┃ ┣ 📜CBMix14.dat
- ┃ ┣ 📜CBMix15.dat
- ┃ ┣ 📜CBMix16.dat
- ┃ ┣ 📜CBMix17.dat
- ┃ ┣ 📜CBMix18.dat
- ┃ ┣ 📜CBMix19.dat
- ┃ ┣ 📜CBMix20.dat
- ┃ ┣ 📜DI-NEARP-n240-Q16k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q4k.dat
- ┃ ┣ 📜DI-NEARP-n240-Q8k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q16k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q4k.dat
- ┃ ┣ 📜DI-NEARP-n422-Q8k.dat
- ┃ ┣ 📜DI-NEARP-n442-Q2k.dat
- ┃ ┣ 📜DI-NEARP-n442-Q4k.dat
- ┃ ┣ 📜mggdb_0.25_1.dat
- ┃ ┣ 📜mggdb_0.25_10.dat
- ┃ ┣ 📜mggdb_0.25_2.dat
- ┃ ┣ 📜mggdb_0.25_3.dat
- ┃ ┣ 📜mggdb_0.25_4.dat
- ┃ ┣ 📜mggdb_0.25_5.dat
- ┃ ┣ 📜mggdb_0.25_6.dat
- ┃ ┣ 📜mggdb_0.25_7.dat
- ┃ ┣ 📜mggdb_0.25_8.dat
- ┃ ┣ 📜mggdb_0.25_9.dat
- ┃ ┣ 📜mgval_0.50_10A.dat
- ┃ ┣ 📜mgval_0.50_10B.dat
- ┃ ┣ 📜mgval_0.50_10C.dat
- ┃ ┣ 📜mgval_0.50_10D.dat
- ┃ ┣ 📜mgval_0.50_8B.dat
- ┃ ┣ 📜mgval_0.50_8C.dat
- ┃ ┣ 📜mgval_0.50_9A.dat
- ┃ ┣ 📜mgval_0.50_9B.dat
- ┃ ┣ 📜mgval_0.50_9C.dat
- ┃ ┗ 📜mgval_0.50_9D.dat
- ┗ 
-📜main.ipynb
+📂etapa_01
+┣  📂app
+┃  ┣ 📂src
+┃  ┃ ┣ 📂algorithms
+┃  ┃ ┃ ┗ 📜algorithms.py
+┃  ┃ ┣ 📂graph
+┃  ┃ ┃ ┗ 📜graph.py
+┃  ┃ ┣ 📂lang
+┃  ┃ ┃ ┗ 📜labels.py
+┃  ┃ ┣ 📂loader
+┃  ┃ ┃ ┗ 📜loader.py
+┃  ┃ ┣ 📂metrics
+┃  ┃ ┃ ┗ 📜metrics.py
+┃  ┃ ┗ 📂utils
+┃  ┃   ┗ 📜utils.py
+┃  ┗ 📂storage
+┃    ┗ 📜Arquivos disponibilizados para teste.
+┣ 📜README.md
+┗  📜main.ipynb  
+
+📂etapa_02
+┣  📂app
+┃  ┣ 📂src
+┃  ┃ ┣ 📂algorithms
+┃  ┃ ┃ ┣ 📜clarke_wright.py
+┃  ┃ ┃ ┗ 📜floyd_warshall.py
+┃  ┃ ┣ 📂graph
+┃  ┃ ┃ ┗ 📜graph.py
+┃  ┃ ┣ 📂loader
+┃  ┃ ┃ ┗ 📜loader.py
+┃  ┃ ┣ 📂metrics
+┃  ┃ ┃ ┗ 📜metrics.py
+┃  ┃ ┗ 📂utils
+┃  ┃   ┣ 📜exporter.py
+┃  ┃   ┣ 📜multiple_data.py
+┃  ┃   ┣ 📜services_map.py
+┃  ┃   ┣ 📜services.py
+┃  ┃   ┣ 📜single_data.py
+┃  ┃   ┗ 📜utils.py
+┃  ┗ 📂storage
+┃    ┣ 📂data
+┃    ┃   ┣ 📂arquivos
+┃    ┃   ┃  ┗📜Arquivos disponibilizados para teste.
+┃    ┃   ┗ 📂exemplo_solucoes
+┃    ┃      ┗📜Arquivos de solucões exemplo para comparação.
+┃    ┣ 📂padroes
+┃    ┃   ┗📜Arquivos disponibilizados para padronização do arquivo solução gerado pelo programa.
+┃    ┗ 📂solucoes
+┃       ┗ 📜Onde ficarão os arquivos das soluções geradas pelo programa.
+┣ 📜README.md
+┗ 📜main.ipynb 
+
+
 📜README.md
 
 ```
 
 ---
 
-## ⚙️ Como Rodar o Projeto
+Para mais informações, leia o README de cada etapa, disponíveis em:
 
-### 1. Clone o Repositório
-
-```bash
-git clone https://github.com/i-am-Gab/trabalho-grafos-2025.git
-cd trabalho-grafos-2025
-```
-
-### 2. Instale o Python (se ainda não tiver)
-Instale o Python 3.12+ a partir do site oficial:
-📎 https://www.python.org/downloads/
-
-### 3. Instale as dependencias
-```bash
-pip install pandas jinja2 notebook
-```
-
----
-
-## 🔧 Como Usar
-
-### 1. Executando o Notebook
-Inicie o Jupyter Notebook
-```bash
-jupyter notebook
-```
-
-### 2. Abra o arquivo main.ipynb pela interface do navegador.
-Escolha o arquivo .dat dentro da pasta /storage
-
-Siga as instruções no notebook para rodar cada célula
-
-As métricas e visualizações serão exibidas diretamente no notebook
-
-
-#### 2.1. Formato do Arquivo de Entrada
-O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CARP, contendo:
-
-- Nós obrigatórios (ReN.)
-  
-- Arestas obrigatórias (ReE.)
- 
-- Arcos obrigatórios (ReA.)
-
-- ARC origem destino 
-
-- Custo travessia 
-
-- Demanda 
-
-- Custo serviço  
-
-- Arestas/arcos não obrigatórios (EDGE/ARC sem demanda)
-
-#### 2.2. Execução
-
-Insira o nome do arquivo .dat que será lido pelo programa.
- - O arquivo deve estar dentro de 📂storage;
- - O arquivo deve estar formatado de acordo com os demais arquivos presentes na pasta. 
-
-Saída esperada:
-
-=== Métricas do Grafo ===
-- Número total de vértices
-- Número total de arestas
-- Número total de arcos
-- Número de nós obrigatórios
-- Número de arestas obrigatórias
-- Número de arcos obrigatórios
-- Densidade do grafo
-- Grau mínimo
-- Grau máximo
-- Intermediação (Betweenness Centrality)
-- Caminho médio
-- Diâmetro
-
-=== Matriz de Distâncias (completa) ===
-
-=== Matriz de Predecessores (completa) ===
+- [📜 Etapa 01](https://github.com/i-am-Gab/trabalho-grafos-2025/blob/6a216886ac6fea78558d3f33417555a8cec4b85b/etapa_01/README.md)
+- [📜 Etapa 02](https://github.com/i-am-Gab/trabalho-grafos-2025/blob/6a216886ac6fea78558d3f33417555a8cec4b85b/etapa_02/README.md)
 
 ---
 

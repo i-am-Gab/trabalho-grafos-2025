@@ -1,4 +1,4 @@
-## 📁 Estrutura do Projeto 2
+## 📁 Estrutura do Projeto 3
 
 ```bash
 📂etapa_03

@@ -36,9 +36,10 @@ def executar_algoritmo_arquivos_multiplos(resultado, caminho_saida):
             rotas=rotas,
             custo_total=custo_total,
             mapa_servicos=mapa_servicos,
+            deposito=grafo.deposito,
             tempo_execucao=tempo_execucao,
             tempo_solucao=tempo_solucao
         )
-        
+
     print("Os arquivos solução foram salvos com sucesso! Os mesmos podem ser encontrados em:")
     print(f"etapa_02/{caminho_saida}")

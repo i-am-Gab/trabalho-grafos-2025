@@ -36,6 +36,7 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida):
         rotas=rotas,
         custo_total=custo_total,
         mapa_servicos=mapa_servicos,
+        deposito=grafo.deposito,
         tempo_execucao=tempo_execucao,
         tempo_solucao=tempo_solucao
     )

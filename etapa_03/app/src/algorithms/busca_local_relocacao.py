@@ -62,3 +62,5 @@ def busca_local_relocacao(rotas, grafo, distancias, indice):
                         rotas[j]['rota'] = nova_rota_j
                         rotas[j]['carga'] += novo_servico['demanda']
                         rotas[j]['custo_total'] = novo_custo_j
+
+    return rotas

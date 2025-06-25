@@ -1,10 +1,11 @@
 ## 📁 Estrutura do Projeto 2
 
 ```bash
-📂etapa_02
+📂etapa_03
 ┣  📂app
 ┃  ┣ 📂src
 ┃  ┃ ┣ 📂algorithms
+┃  ┃ ┃ ┣ 📜busca_local_relocacao.py
 ┃  ┃ ┃ ┣ 📜clarke_wright.py
 ┃  ┃ ┃ ┗ 📜floyd_warshall.py
 ┃  ┃ ┣ 📂graph
@@ -64,7 +65,7 @@ O arquivo (ex.: BHW1.dat) deve seguir um formato compatível com instâncias CAR
 
 ### 2. Execução
 
-Execute o arquivo main.ipynb localizado dentro de 📂etapa_02
+Execute o arquivo main.ipynb localizado dentro de 📂etapa_03
 
 Informe a maneira com que você deseja executar o programa:
     1 - Executar arquivo único.

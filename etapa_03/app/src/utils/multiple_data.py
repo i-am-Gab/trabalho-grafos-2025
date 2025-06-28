@@ -7,6 +7,8 @@ from app.src.algorithms.clarke_wright import clarke_wright
 from app.src.utils.service_map import mapear_servicos_para_id_servico
 from app.src.utils.exporter import salvar_solucao
 from app.src.algorithms.busca_local_relocacao import busca_local_relocacao
+from app.src.utils.cost import calcular_custo_rota
+from app.src.utils.services import listar_servicos
 
 def executar_algoritmo_arquivos_multiplos(resultado, caminho_saida):
     for caminho in resultado:
@@ -23,6 +25,7 @@ def executar_algoritmo_arquivos_multiplos(resultado, caminho_saida):
         fim_solucao = time.perf_counter()
         
         mapa_servicos = mapear_servicos_para_id_servico(grafo)
+
         custo_total = sum(rota["custo_total"] for rota in rotas)
         
         fim_execucao = time.perf_counter()
@@ -42,4 +45,4 @@ def executar_algoritmo_arquivos_multiplos(resultado, caminho_saida):
         )
 
     print("Os arquivos solução foram salvos com sucesso! Os mesmos podem ser encontrados em:")
-    print(f"etapa_02/{caminho_saida}")
+    print(f"etapa_03/{caminho_saida}")

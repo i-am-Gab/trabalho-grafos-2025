@@ -7,6 +7,8 @@ from app.src.algorithms.clarke_wright import clarke_wright
 from app.src.utils.service_map import mapear_servicos_para_id_servico
 from app.src.utils.exporter import salvar_solucao
 from app.src.algorithms.busca_local_relocacao import busca_local_relocacao
+from app.src.algorithms.busca_local_relocacao import calcular_custo_rota
+from app.src.utils.services import listar_servicos
 
 def executar_algoritmo_arquivo_unico(resultado, caminho_saida):
     inicio_execucao = time.perf_counter()
@@ -22,6 +24,14 @@ def executar_algoritmo_arquivo_unico(resultado, caminho_saida):
     fim_solucao = time.perf_counter()
     
     mapa_servicos = mapear_servicos_para_id_servico(grafo)
+
+    for rota in rotas:
+            servicos_info = listar_servicos(grafo)
+            servico_por_tupla = {(s['origem'], s['destino']): s for s in servicos_info}
+            novo_custo = calcular_custo_rota(rota['rota'], distancias, index, grafo.deposito, servico_por_tupla)
+            rota['custo_total'] = novo_custo
+
+
     custo_total = sum(rota["custo_total"] for rota in rotas)
     
     fim_execucao = time.perf_counter()
